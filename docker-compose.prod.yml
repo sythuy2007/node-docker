@@ -8,12 +8,12 @@ services:
       context: .
       args:
         NODE_ENV: production
+        
     environment:
       - NODE_ENV=production
       - MONGO_USER=${MONGO_USER}
       - MONGO_PASSWORD=${MONGO_PASSWORD}
       - SESSION_SECRET=${SESSION_SECRET}
-
     command:  node index.js
   mongo:
     environment:
